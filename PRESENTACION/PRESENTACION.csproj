@@ -46,14 +46,125 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Calendario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calendario.Designer.cs">
+      <DependentUpon>Calendario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlUsuario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlUsuario.Designer.cs">
+      <DependentUpon>ControlUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlUsuarioDias.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlUsuarioDias.Designer.cs">
+      <DependentUpon>ControlUsuarioDias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormInformeReservas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInformeReservas.Designer.cs">
+      <DependentUpon>FormInformeReservas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNewSerPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNewSerPersonal.Designer.cs">
+      <DependentUpon>FormNewSerPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNuevoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNuevoCliente.Designer.cs">
+      <DependentUpon>FormNuevoCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReportePago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportePago.Designer.cs">
+      <DependentUpon>FormReportePago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormServicioPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormServicioPersonal.Designer.cs">
+      <DependentUpon>FormServicioPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormularioCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioCliente.Designer.cs">
+      <DependentUpon>FormularioCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormularioEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioEvento.Designer.cs">
+      <DependentUpon>FormularioEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularioPrueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularioPrueba.Designer.cs">
+      <DependentUpon>formularioPrueba.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Calendario.resx">
+      <DependentUpon>Calendario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlUsuario.resx">
+      <DependentUpon>ControlUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlUsuarioDias.resx">
+      <DependentUpon>ControlUsuarioDias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInformeReservas.resx">
+      <DependentUpon>FormInformeReservas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNewSerPersonal.resx">
+      <DependentUpon>FormNewSerPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNuevoCliente.resx">
+      <DependentUpon>FormNuevoCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReportePago.resx">
+      <DependentUpon>FormReportePago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormServicioPersonal.resx">
+      <DependentUpon>FormServicioPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioCliente.resx">
+      <DependentUpon>FormularioCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioEvento.resx">
+      <DependentUpon>FormularioEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularioPrueba.resx">
+      <DependentUpon>formularioPrueba.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
