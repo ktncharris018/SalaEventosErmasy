@@ -28,6 +28,7 @@ namespace BLL.Servicios
                     return ("No se puede Agregar este servicio, debido a que No existe una reserva con esta identificacion");
                 }
                 servicio.ValorServicio = CalcularValorServicioInstalaciones(servicio);
+                servicio.IdServicio = indiceServicio();
                 repositorioServicio.Crear(servicio);
                 return ($"E servicio se ha agregado correctamente");
             }
@@ -46,7 +47,14 @@ namespace BLL.Servicios
             return repositorioServicio.listaServicios();
         }
 
-        private decimal CalcularValorServicioInstalaciones(ServicioInstalacion servicio)
+        public int indiceServicio()
+        {
+            List<ServicioInstalacion> lista = listaServicio();
+            ServicioInstalacion servicio = lista[lista.Count - 1];
+            return servicio.IdServicio+1;
+        }
+
+        public decimal CalcularValorServicioInstalaciones(ServicioInstalacion servicio)
         {
             decimal valor = 0;
             if (servicio.TipoInstalacion == "Sonido")

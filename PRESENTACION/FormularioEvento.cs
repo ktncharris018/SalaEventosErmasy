@@ -24,6 +24,7 @@ namespace PRESENTACION
 
         private void FormularioEvento_Load(object sender, EventArgs e)
         {
+            txtIdReserva.Text = servicioReserva.idReserva().ToString();
             txtFecha.Text = ControlUsuarioDias.static_Dia + "/" + Calendario.static_Mes + "/" + Calendario.static_Año;
            // dateTimeHoraInicio.Text = string.Format("{HH:mm:ss}");
         }

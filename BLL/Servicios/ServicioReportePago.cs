@@ -1,4 +1,5 @@
-﻿using DAL.Repositorios;
+﻿using DAL.BaseDatos;
+using DAL.Repositorios;
 using ENTITY.Entidades;
 using System;
 using System.Collections.Generic;
@@ -13,8 +14,17 @@ namespace BLL.Servicios
         private readonly RepositorioReportePago repositorioReporte;
         private readonly RepositorioServicioPersonal servicioPersonal;
         private readonly RepositorioServicioInstalacion servicioInstalacion;
+
+        //private readonly BDRepositorioReportePago repositorioReporte;
+        //private readonly BDRepositorioServicioPersonal servicioPersonal;
+        //private readonly BDRepositorioServicioInstalacion servicioInstalacion;
+
         public ServicioReportePago() 
         {
+            //repositorioReporte = new BDRepositorioReportePago();
+            //servicioPersonal = new BDRepositorioServicioPersonal();
+            //servicioInstalacion = new BDRepositorioServicioInstalacion();
+
             repositorioReporte = new RepositorioReportePago();
             servicioPersonal = new RepositorioServicioPersonal();
             servicioInstalacion = new RepositorioServicioInstalacion();
@@ -23,6 +33,7 @@ namespace BLL.Servicios
         {
             try
             {
+                reporte.TotalPagar = (decimal)TotalReserva(reporte.reserva);
                 repositorioReporte.Crear(reporte);
                 return ($"Reporte Creado correctamente");
             }
@@ -40,6 +51,13 @@ namespace BLL.Servicios
         public List<ReportePago> listaReportes()
         {
             return repositorioReporte.listaReportes();
+        }
+
+        public int indiceReporte()
+        {
+            List<ReportePago> lista = listaReportes();
+            ReportePago reporte = lista[lista.Count - 1];
+            return reporte.IdReportePago + 1;
         }
 
         public decimal SubTotalPersonal(Reserva reserva)
@@ -83,13 +101,14 @@ namespace BLL.Servicios
             return valor;
         }
 
-        //public double TotalReserva(Reserva r)
-        //{
-        //    double valor = 0; 
-        //    valor = TotalServicio(r) + (NumHoras(r) * Reserva.ValorHora);
+        public double TotalReserva(Reserva r)
+        {
+            double valor = 0;
+            decimal num = (decimal)NumHoras(r);
+            valor = (double)(TotalServicio(r) + (num * Reserva.ValorHora));
 
-        //    return valor;
-        //}
+            return valor;
+        }
 
         private double NumHoras(Reserva r)
         { 

@@ -26,7 +26,7 @@ namespace PRESENTACION
             foreach (ReportePago r in servicioReporte.listaReportes())
             {
                 tblReportePago.Rows.Add(r.IdReportePago,r.Fecha.ToString("d"),r.reserva.cliente.cedula,r.reserva.tipoEvento,servicioReporte.SubTotalPersonal(r.reserva).ToString(),
-                    servicioReporte.SubTotalInstalacion(r.reserva).ToString(),servicioReporte.TotalServicio(r.reserva),"0","Facturar");
+                    servicioReporte.SubTotalInstalacion(r.reserva).ToString(),servicioReporte.TotalServicio(r.reserva),servicioReporte.TotalReserva(r.reserva),"Facturar");
             }
         }
     }

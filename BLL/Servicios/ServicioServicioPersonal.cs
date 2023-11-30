@@ -29,6 +29,7 @@ namespace BLL.Servicios
                     return ("No se puede Agregar este servicio, debido a que No existe una reserva con esta identificacion");
                 }
                 servicio.ValorServicio = CalcularValorServicioPersonal(servicio);
+                servicio.IdServicio = indiceServicio();
                 repositorioServicio.Crear(servicio);
                 return ($"E servicio se ha agregado correctamente");
             }
@@ -48,14 +49,20 @@ namespace BLL.Servicios
             return repositorioServicio.listaServicios();
         }
 
-        private decimal CalcularValorServicioPersonal(ServicioPersonal servicio)
+        public int indiceServicio()
+        {
+            List<ServicioPersonal> lista = listaServicios();
+            ServicioPersonal servicio = lista[lista.Count - 1];
+            return servicio.IdServicio + 1;
+        }
+        public decimal CalcularValorServicioPersonal(ServicioPersonal servicio)
         {
             decimal valor = 0;
             if (servicio.TipoPersonal == "Logistica")
             {
                 valor = servicio.cantidad * ServicioPersonal.ValorLogistica;
             }
-            else if (servicio.TipoPersonal == "Musicos")
+            else if (servicio.TipoPersonal == "Musico")
             {
                 valor = servicio.cantidad * ServicioPersonal.ValorMusicos;
             }

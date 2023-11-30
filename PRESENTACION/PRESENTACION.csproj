@@ -70,6 +70,24 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdmin.Designer.cs">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAdminPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdminPersonal.Designer.cs">
+      <DependentUpon>FormAdminPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAdminReservas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdminReservas.Designer.cs">
+      <DependentUpon>FormAdminReservas.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormInformeReservas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +111,12 @@
     </Compile>
     <Compile Include="FormReportePago.Designer.cs">
       <DependentUpon>FormReportePago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormServicioInstalacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormServicioInstalacion.Designer.cs">
+      <DependentUpon>FormServicioInstalacion.cs</DependentUpon>
     </Compile>
     <Compile Include="FormServicioPersonal.cs">
       <SubType>Form</SubType>
@@ -124,6 +148,12 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewSerInstalacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewSerInstalacion.Designer.cs">
+      <DependentUpon>NewSerInstalacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Calendario.resx">
@@ -138,6 +168,15 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAdmin.resx">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAdminPersonal.resx">
+      <DependentUpon>FormAdminPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAdminReservas.resx">
+      <DependentUpon>FormAdminReservas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormInformeReservas.resx">
       <DependentUpon>FormInformeReservas.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormReportePago.resx">
       <DependentUpon>FormReportePago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormServicioInstalacion.resx">
+      <DependentUpon>FormServicioInstalacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormServicioPersonal.resx">
       <DependentUpon>FormServicioPersonal.cs</DependentUpon>
@@ -164,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewSerInstalacion.resx">
+      <DependentUpon>NewSerInstalacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

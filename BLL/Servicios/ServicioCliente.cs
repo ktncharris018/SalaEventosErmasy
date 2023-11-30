@@ -1,4 +1,5 @@
-﻿using DAL.Repositorios;
+﻿using DAL.BaseDatos;
+using DAL.Repositorios;
 using ENTITY.Entidades;
 using System;
 using System.Collections.Generic;
@@ -12,9 +13,11 @@ namespace BLL.Servicios
     public class ServicioCliente
     {
         private readonly RepositorioCliente repositorio;
+        //private readonly BDRepositorioCliente repositorio;
         public ServicioCliente()
         {
             repositorio = new RepositorioCliente();
+            //repositorio = new BDRepositorioCliente();
         }
 
         public string Crear(Cliente cliente)

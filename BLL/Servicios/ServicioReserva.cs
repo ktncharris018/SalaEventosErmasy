@@ -1,4 +1,5 @@
-﻿using DAL.Repositorios;
+﻿using DAL.BaseDatos;
+using DAL.Repositorios;
 using ENTITY.Entidades;
 using System;
 using System.Collections.Generic;
@@ -15,10 +16,14 @@ namespace BLL.Servicios
     {
         private readonly RepositorioReserva repositorioReserva;
         private readonly RepositorioCliente repositorioCliente;
+
+        //private readonly BDRepositorioReserva repositorioReserva;
+       // private readonly BDRepositorioCliente repositorioCliente;
         public ServicioReserva()
         {
             repositorioReserva = new RepositorioReserva();
             repositorioCliente = new RepositorioCliente();
+           
         }
 
         public string Crear(Reserva reserva)
@@ -82,6 +87,44 @@ namespace BLL.Servicios
                 }
             }
             return filtrado;
+        }
+
+        public List<Reserva> FiltroPorEstado(string Estado)
+        {
+            List<Reserva> filtrado = new List<Reserva>();
+            foreach (Reserva reserva in listaReservas())
+            {
+                if (reserva.estado == Estado)
+                {
+                    filtrado.Add(reserva);
+                }
+            }
+            return filtrado;
+        }
+
+        public int idReserva()
+        {
+            int id = 0;
+            List<Reserva> lista = listaReservas();
+            Reserva reserva = lista[lista.Count - 1];
+            
+            return reserva.idReserva+1;
+        }
+
+        public int ReservasMes()
+        {
+            DateTime date = DateTime.Now;
+            int Mes, Año;
+            
+
+            Mes = date.Month;
+            Año = date.Year;
+
+            var reservasProgramadas = listaReservas().Where(reserva => reserva.fecha.Month == Mes &&
+            reserva.fecha.Year == Año
+            );
+
+            return reservasProgramadas.Count();
         }
 
         private bool ValidarFecha(Reserva reserva)

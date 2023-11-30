@@ -123,5 +123,35 @@ namespace PRESENTACION
             reporte.Show();
             ocultarSubMenu();
         }
+
+        private void cerrarSesionToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void salirProgramaToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            DialogResult salir = MessageBox.Show("Desea salir del programa", "Ermasy", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (salir == DialogResult.Yes)
+            {
+                Application.ExitThread();
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            panePrueba.Controls.Clear();
+            FormServicioInstalacion form = new FormServicioInstalacion();
+            form.TopLevel = false;
+            panePrueba.Controls.Add(form);
+            form.Size = panePrueba.Size;
+            form.Show();
+            ocultarSubMenu();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

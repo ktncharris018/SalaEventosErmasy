@@ -22,12 +22,14 @@ namespace PRESENTACION
         public FormNewSerPersonal()
         {
             InitializeComponent();
+            txtIdservicio.Text = servicio.indiceServicio().ToString();
         }
 
         public FormNewSerPersonal(string tipoPersonal)
         {
             InitializeComponent();
             txtTipoPersonal.Text = tipoPersonal.ToString();
+            txtIdservicio.Text = servicio.indiceServicio().ToString();
             
         }
 
@@ -37,6 +39,7 @@ namespace PRESENTACION
             txtIdReserva.Text = id.ToString();
             txtIdReserva.Enabled = false;
             txtTipoPersonal.Text = tipoPersonal.ToString();
+            txtIdservicio.Text = servicio.indiceServicio().ToString();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)

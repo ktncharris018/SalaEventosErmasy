@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entidades\Cliente.cs" />
+    <Compile Include="Entidades\Personal.cs" />
     <Compile Include="Entidades\ReportePago.cs" />
     <Compile Include="Entidades\ServicioInstalacion.cs" />
     <Compile Include="Entidades\Persona.cs" />

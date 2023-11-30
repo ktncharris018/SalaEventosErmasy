@@ -129,6 +129,7 @@
             // 
             // txtIdReserva
             // 
+            this.txtIdReserva.Enabled = false;
             this.txtIdReserva.Location = new System.Drawing.Point(146, 82);
             this.txtIdReserva.Name = "txtIdReserva";
             this.txtIdReserva.Size = new System.Drawing.Size(155, 20);

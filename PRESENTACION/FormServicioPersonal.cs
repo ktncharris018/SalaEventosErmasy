@@ -29,25 +29,25 @@ namespace PRESENTACION
             lista = servicioPersonals;
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            FormNewSerPersonal form = new FormNewSerPersonal();
-            form.ShowDialog();
-        }
+        //private void btnAgregar_Click(object sender, EventArgs e)
+        //{
+        //    FormNewSerPersonal form = new FormNewSerPersonal();
+        //    form.ShowDialog();
+        //}
 
         private void LlenarTabla()
         {
             tblServicioPersonal.Rows.Clear();
             foreach (ServicioPersonal servicio in lista)
             {
+                servicio.ValorServicio = servicioPersonal.CalcularValorServicioPersonal(servicio);
                 tblServicioPersonal.Rows.Add(servicio.IdServicio,servicio.reserva.idReserva,servicio.TipoPersonal,servicio.cantidad,servicio.ValorServicio);
             }
         }
 
         private void cmbTipoPersonal_Click(object sender, EventArgs e)
         {
-            //FormNewSerPersonal form = new FormNewSerPersonal();
-            //form.ShowDialog();
+            
         }
 
         private void cmbTipoPersonal_SelectionChangeCommitted(object sender, EventArgs e)
@@ -75,6 +75,7 @@ namespace PRESENTACION
             }
             MessageBox.Show("Servicios agregados");
             tblServicioPersonal.Rows.Clear();
+            lista.Clear();
         }
     }
 }

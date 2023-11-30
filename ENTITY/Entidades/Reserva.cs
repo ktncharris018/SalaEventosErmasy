@@ -17,7 +17,7 @@ namespace ENTITY.Entidades
         public string observaciones { get; set; }
         public string estado { get; set; }
 
-        public const double ValorHora = 2000;
+        public const decimal ValorHora = 2000;
 
         public Reserva()
         {

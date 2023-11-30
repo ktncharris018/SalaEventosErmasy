@@ -77,8 +77,6 @@ namespace BLL.Servicios
                 {
                     return true;
                 }
-                else
-                    return false;
             }
             return false;
         }

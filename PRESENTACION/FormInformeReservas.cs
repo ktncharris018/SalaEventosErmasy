@@ -53,9 +53,7 @@ namespace PRESENTACION
 
         private void item2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Servicio Instalcion Funicionando");
-            
-            //AbrirFormularios(form);
+
         }
 
         private int IndiceTabla()
@@ -68,9 +66,7 @@ namespace PRESENTACION
     
         private void item1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Servicio Personal");
-            FormNewSerPersonal form = new FormNewSerPersonal(IndiceTabla(),item1ToolStripMenuItem.Text);
-            AbrirFormularios(form);
+          
         }
         private void AbrirFormularios(Form form)
         {
@@ -91,11 +87,39 @@ namespace PRESENTACION
         private void CrearReporte(Reserva reserva)
         {
             ReportePago reporte = new ReportePago();
-            reporte.IdReportePago = 1;
+            reporte.IdReportePago = reportePago.indiceReporte();
             reporte.Fecha = DateTime.Now;
             reporte.TotalPagar = 0;
             reporte.reserva = reserva;
             reportePago.Crear(reporte);
+        }
+
+        private void logisticaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Servicio Personal");
+            FormNewSerPersonal form = new FormNewSerPersonal(IndiceTabla(), logisticaToolStripMenuItem.Text);
+            AbrirFormularios(form);
+        }
+
+        private void musicoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Servicio Personal");
+            FormNewSerPersonal form = new FormNewSerPersonal(IndiceTabla(), musicoToolStripMenuItem.Text);
+            AbrirFormularios(form);
+        }
+
+        private void iluminacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Servicio Instalacion");
+            NewSerInstalacion form = new NewSerInstalacion(IndiceTabla(), iluminacionToolStripMenuItem.Text);
+            AbrirFormularios(form);
+        }
+
+        private void sonidoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Servicio Instalacion");
+            NewSerInstalacion form = new NewSerInstalacion(IndiceTabla(), sonidoToolStripMenuItem.Text);
+            AbrirFormularios(form);
         }
     }
 }

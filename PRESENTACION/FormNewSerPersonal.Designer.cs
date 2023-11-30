@@ -89,6 +89,7 @@
             // 
             // txtIdservicio
             // 
+            this.txtIdservicio.Enabled = false;
             this.txtIdservicio.Location = new System.Drawing.Point(138, 98);
             this.txtIdservicio.Name = "txtIdservicio";
             this.txtIdservicio.Size = new System.Drawing.Size(123, 20);

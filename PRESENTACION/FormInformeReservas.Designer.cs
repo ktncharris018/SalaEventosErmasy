@@ -35,13 +35,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.tblReservas = new System.Windows.Forms.DataGridView();
-            this.MenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.item1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.item2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cmbTipoEvento = new System.Windows.Forms.ComboBox();
-            this.MenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.pagadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,9 +42,20 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.pagadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.item1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logisticaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.musicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.item2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iluminacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sonidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmbTipoEvento = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.tblReservas)).BeginInit();
-            this.MenuStrip.SuspendLayout();
             this.MenuStrip2.SuspendLayout();
+            this.MenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -108,9 +112,72 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.tblReservas.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.tblReservas.Size = new System.Drawing.Size(650, 150);
+            this.tblReservas.Size = new System.Drawing.Size(654, 150);
             this.tblReservas.TabIndex = 1;
             this.tblReservas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblReservas_CellContentClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "IdReserva";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 70;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Fecha";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 80;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Hora Inicio";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 90;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Hora Fin";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 90;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Cliente";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 90;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Tipo Evento";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 90;
+            // 
+            // Column7
+            // 
+            this.Column7.ContextMenuStrip = this.MenuStrip2;
+            this.Column7.HeaderText = "Estado";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // MenuStrip2
+            // 
+            this.MenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pagadoToolStripMenuItem});
+            this.MenuStrip2.Name = "MenuStrip2";
+            this.MenuStrip2.Size = new System.Drawing.Size(115, 26);
+            // 
+            // pagadoToolStripMenuItem
+            // 
+            this.pagadoToolStripMenuItem.Name = "pagadoToolStripMenuItem";
+            this.pagadoToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.pagadoToolStripMenuItem.Text = "Pagado";
+            this.pagadoToolStripMenuItem.Click += new System.EventHandler(this.pagadoToolStripMenuItem_Click);
             // 
             // MenuStrip
             // 
@@ -122,17 +189,51 @@
             // 
             // item1ToolStripMenuItem
             // 
+            this.item1ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.logisticaToolStripMenuItem,
+            this.musicoToolStripMenuItem});
             this.item1ToolStripMenuItem.Name = "item1ToolStripMenuItem";
             this.item1ToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.item1ToolStripMenuItem.Text = "Servicio Personal";
             this.item1ToolStripMenuItem.Click += new System.EventHandler(this.item1ToolStripMenuItem_Click);
             // 
+            // logisticaToolStripMenuItem
+            // 
+            this.logisticaToolStripMenuItem.Name = "logisticaToolStripMenuItem";
+            this.logisticaToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.logisticaToolStripMenuItem.Text = "Logistica";
+            this.logisticaToolStripMenuItem.Click += new System.EventHandler(this.logisticaToolStripMenuItem_Click);
+            // 
+            // musicoToolStripMenuItem
+            // 
+            this.musicoToolStripMenuItem.Name = "musicoToolStripMenuItem";
+            this.musicoToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.musicoToolStripMenuItem.Text = "Musico";
+            this.musicoToolStripMenuItem.Click += new System.EventHandler(this.musicoToolStripMenuItem_Click);
+            // 
             // item2ToolStripMenuItem
             // 
+            this.item2ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.iluminacionToolStripMenuItem,
+            this.sonidoToolStripMenuItem});
             this.item2ToolStripMenuItem.Name = "item2ToolStripMenuItem";
             this.item2ToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.item2ToolStripMenuItem.Text = "Servicio Instalacion";
             this.item2ToolStripMenuItem.Click += new System.EventHandler(this.item2ToolStripMenuItem_Click);
+            // 
+            // iluminacionToolStripMenuItem
+            // 
+            this.iluminacionToolStripMenuItem.Name = "iluminacionToolStripMenuItem";
+            this.iluminacionToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.iluminacionToolStripMenuItem.Text = "Iluminacion";
+            this.iluminacionToolStripMenuItem.Click += new System.EventHandler(this.iluminacionToolStripMenuItem_Click);
+            // 
+            // sonidoToolStripMenuItem
+            // 
+            this.sonidoToolStripMenuItem.Name = "sonidoToolStripMenuItem";
+            this.sonidoToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.sonidoToolStripMenuItem.Text = "Sonido";
+            this.sonidoToolStripMenuItem.Click += new System.EventHandler(this.sonidoToolStripMenuItem_Click);
             // 
             // label2
             // 
@@ -150,69 +251,12 @@
             this.cmbTipoEvento.Items.AddRange(new object[] {
             "Seleccionar",
             "Boda",
-            "cumpleaños"});
+            "Cumpleaños"});
             this.cmbTipoEvento.Location = new System.Drawing.Point(161, 89);
             this.cmbTipoEvento.Name = "cmbTipoEvento";
             this.cmbTipoEvento.Size = new System.Drawing.Size(121, 21);
             this.cmbTipoEvento.TabIndex = 3;
             this.cmbTipoEvento.SelectedIndexChanged += new System.EventHandler(this.cmbTipoEvento_SelectedIndexChanged);
-            // 
-            // MenuStrip2
-            // 
-            this.MenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pagadoToolStripMenuItem});
-            this.MenuStrip2.Name = "MenuStrip2";
-            this.MenuStrip2.Size = new System.Drawing.Size(181, 48);
-            // 
-            // pagadoToolStripMenuItem
-            // 
-            this.pagadoToolStripMenuItem.Name = "pagadoToolStripMenuItem";
-            this.pagadoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.pagadoToolStripMenuItem.Text = "Pagado";
-            this.pagadoToolStripMenuItem.Click += new System.EventHandler(this.pagadoToolStripMenuItem_Click);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "IdReserva";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Fecha";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Hora Inicio";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Hora Fin";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Cliente";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Tipo Evento";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.ContextMenuStrip = this.MenuStrip2;
-            this.Column7.HeaderText = "Estado";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
             // 
             // FormInformeReservas
             // 
@@ -227,8 +271,8 @@
             this.Name = "FormInformeReservas";
             this.Text = "FormInformeReservas";
             ((System.ComponentModel.ISupportInitialize)(this.tblReservas)).EndInit();
-            this.MenuStrip.ResumeLayout(false);
             this.MenuStrip2.ResumeLayout(false);
+            this.MenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -243,6 +287,8 @@
         private System.Windows.Forms.ContextMenuStrip MenuStrip;
         private System.Windows.Forms.ToolStripMenuItem item1ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem item2ToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip MenuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem pagadoToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -250,7 +296,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.ContextMenuStrip MenuStrip2;
-        private System.Windows.Forms.ToolStripMenuItem pagadoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logisticaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem musicoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem iluminacionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sonidoToolStripMenuItem;
     }
 }

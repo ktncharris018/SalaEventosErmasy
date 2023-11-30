@@ -39,7 +39,8 @@ namespace PRESENTACION
         {
             if (usuario.tipoUsuario == "Administrador")
             {
-                MessageBox.Show("Ingreso admin");
+                FormAdmin admin = new FormAdmin();
+                admin.Show();
             }
             else
             {
